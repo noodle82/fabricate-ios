@@ -150,3 +150,28 @@ html.typing .hint{padding:8px;font-size:12px;margin:0 0 8px;max-height:90px;over
 .legal-doc h1{font-size:27px;margin:12px 0}.legal-doc h2{font-size:21px;color:#54d4d5;margin:22px 0 12px}.legal-doc h3{font-size:17px;margin-top:24px}.legal-doc .tag{font-size:11px;color:#f4cc43}.legal-doc .meta{font-size:12px;color:var(--muted)}.legal-doc section{margin:22px 0;padding-top:18px;border-top:1px solid #355468}.legal-doc .intro,.legal-doc .owner{padding:14px;background:#16394b;border-radius:12px}.legal-doc .toc{padding:0 12px}.legal-doc .toc li{margin:5px 0}.legal-doc .button{display:inline-block;background:#f4cc43;color:#071a2b;padding:10px 14px;text-decoration:none;border-radius:9px;font-weight:700}.legal-doc .lead{font-size:16px}
 
 .champion-fib{width:clamp(230px,34vw,400px);max-width:100%;margin-inline:auto;padding-top:40px}.champion-fib .fib-actor{width:100%;max-width:none}
+
+/* Left of the writing task on tablets; above the question on phones. */
+html.typing .input-panel .question-column{display:flex;flex-direction:column;justify-content:flex-start;gap:10px;overflow:auto}
+html.typing .input-panel .question-column h1{margin:0!important;flex:none;order:0}
+html.typing .writing-fib{order:1;flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
+html.typing .writing-fib .perched-fib{display:block!important;position:relative!important;inset:auto!important;transform:none!important;width:clamp(125px,20vw,230px)!important;max-width:100%;height:auto;margin:0!important;flex-shrink:0}
+html.typing .writing-fib .fib-actor canvas{max-width:100%}
+/* The crown's open band fits around the fur, with its rim lowered onto the head. */
+.champion-fib .champion-crown{top:0;left:20%;width:60%;transform:rotate(-7deg);overflow:visible;filter:drop-shadow(0 2px 1px #03152155)}
+.champion-fib:has(.tap-laugh){animation:tap-chuckle .32s ease-in-out infinite}
+.champion-fib .tap-laugh{animation:none}
+@media(max-width:759px){
+ html.typing .input-panel{grid-template-rows:minmax(0,1fr) auto;gap:8px}
+ html.typing .input-panel .question-column{justify-content:flex-end;gap:5px;padding-bottom:0}
+ html.typing .input-panel .question-column h1{order:1;font-size:clamp(17px,5vw,22px);line-height:1.15}
+ html.typing .writing-fib{order:0;flex:0 1 auto;min-height:45px;align-self:center}
+ html.typing .writing-fib .perched-fib{width:clamp(52px,calc(var(--visible-height) * .19),100px)!important}
+ html.typing .input-panel .response-column{max-height:calc(var(--visible-height) * .61);padding:10px}
+ html.typing .response-column form>.eyebrow{margin-bottom:6px}
+ html.typing textarea.field{height:62px;min-height:52px}
+ html.typing .response-column form .primary{margin-top:8px;min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){.champion-fib:has(.tap-laugh){animation:none}}
+
+html.typing .question-column{scrollbar-width:none}html.typing .question-column::-webkit-scrollbar{display:none}
