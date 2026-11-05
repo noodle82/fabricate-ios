@@ -131,3 +131,22 @@ html.typing .hint{padding:8px;font-size:12px;margin:0 0 8px;max-height:90px;over
 @media(prefers-reduced-motion:reduce){.answer-card.zero-leaving{will-change:auto}}
 
 .answer-card.last-answer-wide{grid-column:1/-1}
+
+/* Keep the question beside the writing task instead of at the top of empty space. */
+@media(max-width:759px){html.typing .input-panel .question-column{display:flex;flex-direction:column;justify-content:flex-start;padding-bottom:5px}html.typing .input-panel .question-column h1{flex:none;margin-top:auto!important}}
+.gather-call{display:flex;flex-wrap:wrap;align-items:center;gap:0 5px!important}
+.gather-call .gather-instruction{color:#54d4d5;font-weight:750}
+.reveal-layout .board-status:has(.gather-call){height:auto;min-height:36px}
+.champion-fib{position:relative;isolation:isolate;padding-top:11%;overflow:visible}
+.champion-fib .crown{display:none}
+.champion-fib .champion-crown{position:absolute;z-index:3;pointer-events:none;top:-5%;left:23%;width:54%;height:auto;transform:rotate(-7deg);filter:drop-shadow(0 5px 3px #03152166);}
+.champion-fib::after{content:'';position:absolute;z-index:-1;inset:10% 0 0;border-radius:50%;background:radial-gradient(ellipse,#f4cc4322,transparent 65%);pointer-events:none}
+.legal-footer{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:14px}
+.legal-footer button{background:none;color:#54d4d5;border:0;padding:7px 0;font:inherit;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+.legal-links{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.legal-links button{background:#163b4d;border:1px solid #426578;color:#54d4d5;border-radius:10px;padding:10px 12px;font:inherit;font-size:14px;font-weight:650}
+.legal-doc{font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.legal-doc a{color:#54d4d5;text-underline-offset:3px}
+.legal-doc h1{font-size:27px;margin:12px 0}.legal-doc h2{font-size:21px;color:#54d4d5;margin:22px 0 12px}.legal-doc h3{font-size:17px;margin-top:24px}.legal-doc .tag{font-size:11px;color:#f4cc43}.legal-doc .meta{font-size:12px;color:var(--muted)}.legal-doc section{margin:22px 0;padding-top:18px;border-top:1px solid #355468}.legal-doc .intro,.legal-doc .owner{padding:14px;background:#16394b;border-radius:12px}.legal-doc .toc{padding:0 12px}.legal-doc .toc li{margin:5px 0}.legal-doc .button{display:inline-block;background:#f4cc43;color:#071a2b;padding:10px 14px;text-decoration:none;border-radius:9px;font-weight:700}.legal-doc .lead{font-size:16px}
+
+.champion-fib{width:clamp(230px,34vw,400px);max-width:100%;margin-inline:auto;padding-top:40px}.champion-fib .fib-actor{width:100%;max-width:none}
