@@ -10,7 +10,7 @@
   "backgroundColor": "#071a2b",
   "plugins": {
     "Keyboard": {
-      "resize": "body"
+      "resize": "native"
     }
   }
 }
