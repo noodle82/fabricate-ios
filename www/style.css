@@ -77,3 +77,57 @@ html{background:#071a2b!important;min-height:100%;width:100%;overscroll-behavior
 @media(max-height:500px){.reveal-layout .reveal-top h1{font-size:20px;-webkit-line-clamp:2}.reveal-layout{gap:4px 9px}.answer-board{gap:5px}.question-tools{margin-top:-22px}}
 
 @media(max-width:359px){.question-host{grid-template-rows:auto 90px}.question-perch .fib-actor{width:96px}.question-tools .change{font-size:10px}}
+
+html,body{max-width:100%;overflow-x:clip;touch-action:manipulation;overscroll-behavior-x:none}
+#app,main,section,header,.header-actions,.question-column,.response-column,.vote-options{min-width:0;max-width:100%}
+.fib-actor{pointer-events:auto!important;cursor:pointer;touch-action:manipulation}
+.fib-actor:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:35%}
+.bank-perch{pointer-events:auto!important}
+.answer-card,.answer-card.active{cursor:default}
+.board-help{display:none!important}
+.bank-controls{justify-content:center}
+.bank-controls #skipScores{margin-inline:auto;text-align:center}
+.vote-dock #error:empty{display:none}
+.vote-dock .primary{margin:0}
+.vote-dock #error{font-size:13px;margin:0 0 6px;text-align:center}
+#app[data-screen=vote]{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+.vote-dock{position:fixed;z-index:25;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,760px);padding:12px max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom));background:linear-gradient(0deg,#071a2b 80%,#071a2b00)}
+.vote-dock .primary{min-height:50px;margin:0;font-size:16px}
+.tap-laugh{animation:tap-chuckle .32s ease-in-out infinite}
+@keyframes tap-chuckle{0%,100%{translate:0 0;rotate:-.7deg}50%{translate:0 -2px;rotate:.7deg}}
+@media(max-width:759px),(max-height:600px){
+ #app[data-screen=vote]{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+ .vote-dock{position:fixed;z-index:25;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,760px);padding:12px max(16px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom));background:linear-gradient(0deg,#071a2b 80%,#071a2b00);}
+ .vote-dock .primary{min-height:50px;margin:0;font-size:16px}
+ .vote-options{padding-bottom:12px}
+ .voting-panel .stage-fib{margin:6px 0}
+ .voting-panel .stage-fib .fib-actor{max-width:74px;width:74px}
+ .voting-panel h1{font-size:clamp(23px,6vw,28px);line-height:1.18}
+}
+/* Hide the chrome while writing, reserving the remaining space for the question and form. */
+html.typing #app[data-screen=answer]{position:fixed;inset:auto 0 auto;top:var(--visual-top,0px);height:var(--visible-height);width:100%;overflow:hidden;padding:max(8px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) 8px max(12px,env(safe-area-inset-left));display:flex;flex-direction:column;}
+html.typing #app[data-screen=answer]>header,html.typing #app[data-screen=answer]>footer{display:none}
+html.typing .input-panel{flex:1;min-height:0!important;height:auto!important;width:100%;margin:0;padding:14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:16px;align-items:stretch;overflow:hidden}
+html.typing .input-panel .question-column{min-height:0;max-height:none;align-self:stretch;overflow:auto;overscroll-behavior:contain}
+html.typing .input-panel .question-column h1{font-size:clamp(19px,2.8vw,30px);line-height:1.2;margin:0}
+html.typing .input-panel .response-column{min-height:0;max-height:100%;margin:0;padding:12px;overflow:auto;overscroll-behavior:contain;align-self:stretch;}
+html.typing .response-column>.perched-fib{display:none}
+html.typing .response-column form>.eyebrow{font-size:9px;line-height:1.2;display:block;margin:0 0 8px}
+html.typing textarea.field{display:block;width:100%;font-size:17px;line-height:1.3;height:70px;min-height:60px;padding:12px;resize:none;margin:0;outline:0;box-shadow:inset 0 0 0 1px #54d4d5;border:1px solid #54d4d5;border-radius:14px}
+html.typing .response-column form .primary{min-height:45px;margin:10px 0 0;padding:11px;font-size:14px}
+html.typing .input-panel #error{margin:5px 0;font-size:12px}
+html.typing .hint-button{font-size:11px;padding:0 0 7px}
+html.typing .hint{padding:8px;font-size:12px;margin:0 0 8px;max-height:90px;overflow:auto}
+@media(max-width:759px){
+ html.typing .input-panel{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(45px,1fr) auto;gap:10px;padding:12px}
+ html.typing .input-panel .question-column{grid-row:1}
+ html.typing .input-panel .question-column h1{font-size:clamp(18px,5vw,23px);margin:0}
+ html.typing .input-panel .response-column{grid-row:2;max-height:calc(var(--visible-height) * .65);padding:12px}
+}
+@media(prefers-reduced-motion:reduce){.tap-laugh{animation:none}}
+
+.answer-card.zero-leaving{pointer-events:none;will-change:opacity,transform}
+.answer-card{transform-origin:top left}
+@media(prefers-reduced-motion:reduce){.answer-card.zero-leaving{will-change:auto}}
+
+.answer-card.last-answer-wide{grid-column:1/-1}
