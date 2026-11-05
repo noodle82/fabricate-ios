@@ -1,0 +1,16 @@
+{
+  "appId": "com.fabricategame.app",
+  "appName": "FABRICATE!",
+  "webDir": "www",
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#071a2b",
+    "zoomEnabled": false
+  },
+  "backgroundColor": "#071a2b",
+  "plugins": {
+    "Keyboard": {
+      "resize": "body"
+    }
+  }
+}
