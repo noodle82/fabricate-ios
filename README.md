@@ -1,4 +1,4 @@
-# FABRICATE! 1.0 — launch candidate 21
+# FABRICATE! 1.0 — launch candidate 22
 
 iOS launch candidate. com.fabricategame.app. Native StoreKit Premium: com.fabricategame.premium_lifetime. Premium bank is private in _fabricate-native, never in the public website upload.
 
@@ -6,4 +6,4 @@ Candidate 18 purchase and restore were confirmed through TestFlight. This update
 
 Music starts off. SFX start on unless previously switched off. Names and game state are cleared on exit. Privacy, Terms and Support are bundled.
 
-Update 21: dedicated tongue-out pant and contented purr sprites, subtle purr vibration, fair waiting-gesture rotation and shared gesture-unlocked SFX. Includes Update 20 Spotlight and limits. Check Settings > About FABRICATE! for Update 21.
+Update 22: panting eyes match the usual dark pupils. Includes all Update 21 behavior. Check Settings > About FABRICATE! for Update 22.
