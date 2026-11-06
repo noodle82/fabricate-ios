@@ -175,3 +175,13 @@ html.typing .writing-fib .fib-actor canvas{max-width:100%}
 @media(prefers-reduced-motion:reduce){.champion-fib:has(.tap-laugh){animation:none}}
 
 html.typing .question-column{scrollbar-width:none}html.typing .question-column::-webkit-scrollbar{display:none}
+
+.home-premium{display:block;width:100%;margin-top:20px;background:#195669;border:1px solid #54d4d566;color:#f1f6f5;text-align:center}
+.premium-button b,.premium-button small{display:block}.premium-button small{margin-top:6px;font-size:13px;font-weight:500}
+.purchase-message{color:#54d4d5;min-height:1.5em}.premium-owned{font-weight:800;color:#72dfa7;letter-spacing:.1em}
+#premiumContent h3{font-size:clamp(26px,5vw,34px);color:#f4cc43;margin:18px 0}
+#premiumContent ul{padding-left:22px;line-height:1.6}#premiumContent li{margin:8px 0}
+#premiumContent>.primary,#premiumContent>.secondary{display:block;width:100%;margin:14px 0}
+.refresh-shop{display:block;margin:12px auto}button:disabled{cursor:default}
+#premiumContent .notice{background:#173b4d;color:#d6ecec;border:1px solid #426578}
+@media(min-width:1000px){.home-panel{align-items:center}.home-copy{padding-block:12px}}

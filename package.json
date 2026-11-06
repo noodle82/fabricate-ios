@@ -1,8 +1,8 @@
 {
-  "name": "fabricate-testing",
+  "name": "fabricate",
   "version": "1.0.0",
   "private": true,
-  "description": "FABRICATE! iOS gameplay testing preview",
+  "description": "FABRICATE! local party game for iPhone and iPad",
   "scripts": {
     "cap:sync": "cap sync ios",
     "cap:add": "cap add ios",

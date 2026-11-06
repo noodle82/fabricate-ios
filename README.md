@@ -1,7 +1,7 @@
-# FABRICATE! — testing preview 17
+# FABRICATE! 1.0 — launch candidate 18
 
-iOS repository. Free gameplay, Fib reactions and reveal workflow for testing. No real purchase, full premium bank, final legal pages or new release integration is connected. This is not a release candidate.
+iOS launch candidate. com.fabricategame.app. Native StoreKit Premium: com.fabricategame.premium_lifetime. Premium bank is private in _fabricate-native, never in the public website upload.
 
-App identity: com.fabricategame.app. Web content is in www. Codemagic creates the native project during a clean build. Start with ios-simulator-beta; TestFlight needs the matching Apple profile and the existing bluffle_apple API integration available to this Codemagic app. No BLUFFLE app identity or purchases are used.
+The candidate still requires a signed Codemagic build and physical TestFlight purchase/restore checks before submission. Create the matching non-consumable product in the FABRICATE Apple record. The app downloads free, with an optional one-time Premium upgrade. Apple supplies the localized price. No custom server or purchase-validation service is used.
 
-Keep both repositories on the same testing version. Music starts off; sound effects retain the previous preview behaviour. The opening uses the supplied Fabricate voice, followed by a synchronised wink sound.
+Music starts off. SFX start on unless previously switched off. Names and game state are cleared on exit. Privacy, Terms and Support are bundled.

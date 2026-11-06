@@ -8,3 +8,5 @@ function setPlist(key,type,value){try{execFileSync('/usr/libexec/PlistBuddy',['-
 // This preview implements no independent/custom encryption; OS HTTPS remains OS-provided.
 setPlist('ITSAppUsesNonExemptEncryption','bool','false');setPlist('UIStatusBarStyle','string','UIStatusBarStyleLightContent');
 execFileSync('swift',['scripts/make-icons.swift'],{stdio:'inherit'});
+
+execFileSync('node',['scripts/apply-fabricate-premium.mjs'],{stdio:'inherit'});
